@@ -4,7 +4,11 @@ services:
     build:
       context: .
       args:
-        MTPROTO_REPO_URL: ${MTPROXY_REPO_URL}
+        EXT_IP: ${EXT_IP:-}
+        SECRET: ${SECRET:-}
+        WORKERS: ${WORKERS:-}
+        TZ: ${TZ:-}
+        MTPROTO_REPO_URL: ${MTPROXY_REPO_URL:-}
     container_name: mtproto-proxy
     volumes:
       - ./volumes/config:/data
@@ -16,3 +20,5 @@ services:
       - SECRET
       - WORKERS
       - MTPROTO_REPO_URL
+      - TZ
+      - EXT_IP

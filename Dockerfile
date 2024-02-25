@@ -27,7 +27,7 @@ RUN apt -y update > /dev/null 2>&1;\
     apt install -y gcc-9 g++-9 cpp-9 > /dev/null 2>&1;\
     update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 100 --slave /usr/bin/g++ g++ /usr/bin/g++-9 --slave /usr/bin/gcov gcov /usr/bin/gcov-9 > /dev/null 2>&1;\
 # Clone the repo:
-    IP_EXT=${IP_EXT:=$(curl ifconfig.co/ip -s)} ;\
+    IP_EXT=${IP_EXT:=$(curl ifconfig.io/ip -s)} ;\
     IP_INT=$(hostname --ip-address) ;\
     git clone ${MTPROTO_REPO_URL} /srv/MTProxy > /dev/null 2>&1 ;\
 # To build, simply run make, the binary will be in objs/bin/mtproto-proxy:

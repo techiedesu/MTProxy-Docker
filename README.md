@@ -26,7 +26,8 @@ If you want to customize an environment, create a `.env` file replacing the foll
 | SECRET           | `ec4dd80983dbf12d6b354cf7bcfe9a48`           |
 | WORKERS          | 1                                            |
 | MTPROTO_REPO_URL | https://github.com/TelegramMessenger/MTProxy |
-| TZ               |                                              |
+| TZ               | `Europe/Moscow`                              |
+| EXT_IP           |                                              |
 
 An alternative to `MTPROTO_REPO_URL` is https://github.com/GetPageSpeed/MTProxy that is a fork from MTProxy with patches applied.
 
@@ -43,6 +44,9 @@ You can specify two arguments when building an image.
 To generate a random secret, run the following command:
 ```shell
 head -c 16 /dev/urandom | xxd -ps
+
+# if command not found
+head -c 16 /dev/urandom | hexdump -e '18/1 "%02x" "\n"'
 ```
 
 ```shell

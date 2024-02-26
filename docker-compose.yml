@@ -4,7 +4,7 @@ services:
     build:
       context: .
       args:
-        EXT_IP: ${EXT_IP:-}
+        IP_EXT: ${IP_EXT:-}
         SECRET: ${SECRET:-ec4dd80983dbf12d6b354cf7bcfe9a48}
         WORKERS: ${WORKERS:-1}
         TZ: ${TZ:-Europe/Moscow}
@@ -21,4 +21,4 @@ services:
       - WORKERS
       - MTPROTO_REPO_URL
       - TZ
-      - EXT_IP
+      - IP_EXT

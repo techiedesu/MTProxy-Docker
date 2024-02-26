@@ -5,10 +5,10 @@ services:
       context: .
       args:
         EXT_IP: ${EXT_IP:-}
-        SECRET: ${SECRET:-}
-        WORKERS: ${WORKERS:-}
-        TZ: ${TZ:-}
-        MTPROTO_REPO_URL: ${MTPROXY_REPO_URL:-}
+        SECRET: ${SECRET:-ec4dd80983dbf12d6b354cf7bcfe9a48}
+        WORKERS: ${WORKERS:-1}
+        TZ: ${TZ:-Europe/Moscow}
+        MTPROTO_REPO_URL: ${MTPROXY_REPO_URL:-https://github.com/TelegramMessenger/MTProxy}
     container_name: mtproto-proxy
     volumes:
       - ./volumes/config:/data

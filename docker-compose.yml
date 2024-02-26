@@ -14,8 +14,8 @@ services:
       - ./volumes/config:/data
     restart: unless-stopped
     ports:
-      - 8443:8888/udp
-      - 8443:8888/tcp
+      - 8443:8889/udp
+      - 8443:8889/tcp
     environment:
       - SECRET
       - WORKERS

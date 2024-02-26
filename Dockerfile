@@ -53,7 +53,7 @@ RUN apt -y update > /dev/null 2>&1;\
     ╚═╝     ╚═╝   ╚═╝   ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝ \e[0m \n\
     All is setup and done! \n\
     For access MTProxy use this link: \n\
-    \e[1;33mhttps://t.me/proxy?server=$IP_EXT&port=443&secret=$Secret\e[0m"
+    \e[1;33mhttps://t.me/proxy?server=$IP_EXT&port=8443&secret=$Secret\e[0m"
 # Change WORKDIR
 WORKDIR /srv/MTProxy/objs/bin/
 # HEALTHCHECK
